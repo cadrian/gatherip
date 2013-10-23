@@ -1,3 +1,4 @@
+<?php
 // hostname and port to the IMAP server
 $server = "imap.myserver.com";
 $port = 143;
@@ -11,3 +12,4 @@ $tag = "SomeTag";
 
 // storage directory
 $filestore = "/path/to/my/directory";
+?>

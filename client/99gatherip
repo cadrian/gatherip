@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /etc/default/gatherid
+. /etc/default/gatherip
 
 if [ "$2" == up ]; then
     mail -a "From: $FROM" -s "[$TAG]$(hostname --fqdn)" $TO <<EOF
