@@ -8,10 +8,20 @@ Standards-Version: 3.9.4
 #Vcs-Git: git://git.debian.org/collab-maint/parentrol.git
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/parentrol.git;a=summary
 
-Package: parentrol
+Package: gatherip
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, bash (>= 4.2), network-manager, wget, net-tools, hostname (>= 3.14)
 Description: Remote admin management
  This package gathers the IP address of a machine and sends it to a
  predefined address mail. Useful for remote admin of machines on
  dynamic IP networks.
+
+Package: gatherip-server
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, php
+Description: Remote admin management
+ This package manages an IMAP mbox that receives the dynamic IP
+ addresses and displays them to the user.
+ The user must ensure that the site is correctly protected.
+ The user will take the necessary steps to automate the running of the
+ PHP script.
