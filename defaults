@@ -1,0 +1,3 @@
+FROM=return.address@nowhere.com
+TO=to.address@nowhere.com
+TAG=SomeTag

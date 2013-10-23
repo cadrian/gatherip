@@ -1,0 +1,9 @@
+#!/bin/bash
+
+. /etc/default/gatherid
+
+if [ "$2" == up ]; then
+    mail -a "From: $FROM" -s "[$TAG]$(hostname --fqdn)" $TO <<EOF
+$1 $(wget http://ipecho.net/plain -O - -q)$(netstat -anp -t tcp|grep 'LISTEN *[0-9]*/sshd'|grep -oE ':[0-9]+') $(hostname --fqdn)
+EOF
+fi

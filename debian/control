@@ -1,0 +1,17 @@
+Source: gatherip
+Section: admin
+Priority: extra
+Maintainer: Cyril Adrian <cyril.adrian@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+#Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/parentrol.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/parentrol.git;a=summary
+
+Package: parentrol
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, bash (>= 4.2), network-manager, wget, net-tools, hostname (>= 3.14)
+Description: Remote admin management
+ This package gathers the IP address of a machine and sends it to a
+ predefined address mail. Useful for remote admin of machines on
+ dynamic IP networks.
